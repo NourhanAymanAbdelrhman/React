@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainColor:#7b5244;
+    --subColor:#333;
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+header{
+    padding: 30px 0;
+}
+.container{
+     
+    width: 80%;
+    margin: auto;
+}
+.listUnstyle{
+    list-style: none;
+}
+.headerContent{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.headerContent img{
+ flex: 1;
+ max-width: 170px;
+}
+.headerContent nav{
+    flex: 3;
+text-align: center;
+}
+.headerContent .login{
+flex: 1;
+text-align: right;
+}
+
+
+.headerContent ul li{
+display: inline;
+ } 
+.headerContent ul li a{
+    color:var(--subColor)
+}
+a{
+    text-decoration: none;
+}
+.headerContent nav ul li a {
+ padding: 10px 25px;
+ font-weight: bold;
+ position: relative;
+}
+
+.login ul li  {
+padding: 5px 8px;
+font-weight: bold;}
+
+.login ul li:last-child .bag{
+ position: relative;
+ margin-right: 10px;
+}
+.login ul li:last-child .bag::after{
+    position: absolute;
+    content: "0";
+    font-size: 13px;
+    background-color: var(--mainColor);
+    color: white;
+    bottom: 0px;
+    padding: 4px;
+    right: -11px;
+    border-radius: 50%;
+}
+
+.headerContent .navBar ul li .navitem::before {
+    position: absolute;
+    content: "";
+    border-width: 0 2px;
+    border-color: var(--mainColor);
+    border-style: solid;
+    width: 98%;
+    height: 100%;
+    top:0;
+    left:0;
+    transform: scale3d(1,0,1);
+    transition:transform 0.2s;
+}
+.headerContent .navBar ul li .navitem:hover:before {
+    transform: scale3d(1,1,1); 
+}
+
+
+.headerContent .navBar ul li .navitem::after {
+    position: absolute;
+    content: "";
+    border-width: 2px 0;
+    border-color: var(--mainColor);
+    border-style: solid;
+    width: 100%;
+    height: 91%;
+    top:0;
+    left:0;
+    transform: scale3d(0,1,1);
+    transition:transform 0.2s;
+}
+.headerContent .navBar ul li .navitem:hover::after {
+    transform: scale3d(1,1,1); 
+     transition-delay: 0.2s; 
+}
+
+.dropdown{
+position: relative;
+}
+.dropdownMenue{
+ position: absolute;
+  width: 450px;
+ border:2px solid var(--mainColor);
+ padding: 10px;
+ margin-top: 15px;
+ background-color: white;
+ left: 0px;
+ transform: scale(0);
+ transition: transform 0.5s;
+}
+.dropdown:hover .dropdownMenue{
+    transform: scale(1)
+}
+.dropdownMenue ul{
+    display: table-cell;
+    text-align: left;
+    padding: 10px;
+}
+.dropdownMenue ul li:first-child a{
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--mainColor) ;
+}
+.dropdownMenue ul li{
+    line-height: 1.7;
+    display: block;
+   
+}

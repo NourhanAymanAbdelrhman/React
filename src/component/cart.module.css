@@ -1,0 +1,13 @@
+:root{
+    --mainColor:#7b5244;
+    --subColor:#333;
+}
+p{ 
+    color:var(--mainColor) ;
+}
+.btn{
+    background-color:var(--mainColor) ;
+    color: white;
+    padding: 5px;
+    margin: 10px;
+}
